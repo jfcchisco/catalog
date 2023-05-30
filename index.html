@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main id="container">
+        <article class="start" data-index="0" data-status="active">
+            <div class="header"></div>
+            <div class="buttons-menu">
+                <input class="main-button" type="button" value="MEN" onclick="menuClick(3)">
+                <input class="main-button" type="button" value="WOMEN" onclick="menuClick(2)">
+                <input class="main-button" type="button" value="KIDS" onclick="menuClick(1)">
+
+                <div class="name">
+                    <p>MY STORE</p>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <div></div>
+                <div></div>
+            </div>
+            
+        </article>
+
+        <article data-index="1" data-status="inactive">
+            <div class="holder sticky">
+                <input type="button" value="GO BACK" onclick="menuBack()">
+            </div>
+            <div class="item">
+                <div class="item-image">
+                    <img style="width: 100%" src="./img/kid-1.webp" alt="">
+                </div>
+                <div class="item-desc">
+                    ITEM DESCRIPTION
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-image">
+                    <img style="width: 100%" src="./img/kid-2.jpg" alt="">
+                </div>
+                <div class="item-desc">
+                    ITEM DESCRIPTION
+                </div>
+             </div>
+
+            <div class="item">
+                <div class="item-image">
+                    <img style="width: 100%" src="./img/kid-3.jpg" alt="">
+                </div>
+                <div class="item-desc">
+                    ITEM DESCRIPTION
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-image">
+                    <img style="width: 100%" src="./img/kid-4.jpeg" alt="">
+                </div>
+                <div class="item-desc">
+                    ITEM DESCRIPTION
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-image">
+                    <img style="width: 100%" src="./img/kid-5.jpg" alt="">
+                </div>
+                <div class="item-desc">
+                    ITEM DESCRIPTION
+                </div>
+            </div>
+
+            <div class="header">C</div>
+            
+        </article>
+
+        <article data-index="2" data-status="inactive">
+            <div class="holder">
+                D
+                <input type="button" value="GO BACK" onclick="menuBack()">
+            </div>
+            <div class="footer">E</div>
+            <div class="header">F</div>
+            
+        </article>
+
+        <article data-index="3" data-status="inactive">
+            <div class="holder">
+                G
+                <input type="button" value="GO BACK" onclick="menuBack()">
+            </div>
+            <div class="footer">H</div>
+            <div class="header">I</div>
+            
+        </article>
+
+    </main>
+    <script src="script.js"></script>
+
+    <template item-template>
+        <div>
+            ITEM
+        </div>
+    </template>
+
+    <template header-template>
+        <div>
+            HEADER
+        </div>
+    </template>
+
+</body>
+
+</html>

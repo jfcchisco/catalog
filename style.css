@@ -1,0 +1,119 @@
+:root {
+    --color1: rgb(255, 255, 250);
+    --color2: rgb(88, 0, 74);
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0px;
+}
+
+div {
+    width: min(100%, 600px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+main { 
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+main > article {
+    display: grid;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: transform 500ms ease;
+    margin: 0 auto 0 auto;
+}
+
+main > article[data-status="inactive"] {
+    transform: translateX(100%);
+    
+  }
+  
+main > article[data-status="active"] {
+    transform: translateX(0%);
+    
+}
+
+main > article[data-status="inactive-menu"] {
+    transform: translateX(-100%);
+    
+}
+
+.footer {
+    background-color: var(--color1);
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 1fr 2fr;
+}
+
+.header {
+    background-color: var(--color2);
+}
+
+.holder {
+    background-color: chocolate;
+}
+
+.item {
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.item-image, .item-desc {
+    width: 50%;
+    margin: 5px;
+}
+
+.start {
+    height: 100vh;
+    grid-template-columns: 1;
+    grid-template-rows: 10% auto 25%;
+    
+}
+
+.buttons-menu {
+    display: flex;
+    flex-direction: column-reverse;
+    background-image: url("./img/start.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.main-button {
+    margin: 0px 25px 10px 25px;
+    height: 5vh;
+    border-radius: 10px;
+    background-color: white;
+    border: 0px solid;
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.name {
+    text-align: center;
+    font-size: 6vh;
+    font-weight: bold;
+    color: var(--color2);
+    height: 50%;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
