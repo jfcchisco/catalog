@@ -1,4 +1,3 @@
-console.log("Oh yeah");
 
 const menuClick = (menuNumber) => {
 
@@ -10,10 +9,10 @@ const menuClick = (menuNumber) => {
     showMenu.dataset.status = "active";
 
     document.getElementById("container").setAttribute('style', 'overflow-y: scroll');
+    //document.documentElement.scrollTop = 0;
 }
 
 const menuBack = () => {
-
     const currentMenu = document.querySelector(`[data-status="active"]`);
     const mainMenu = document.querySelector(`[data-index="0"]`);
 
@@ -21,4 +20,6 @@ const menuBack = () => {
     currentMenu.dataset.status = "inactive";
 
     document.getElementById("container").setAttribute('style', 'overflow-y: hidden');
+    
+    location.reload();
 }
