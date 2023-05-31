@@ -1,0 +1,47 @@
+body { 
+    overflow: hidden;
+}
+
+.page { 
+    position: absolute; 
+    display: none; 
+    top:0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    box-shadow:0 0 5px rgba(0,0,0,0.5); 
+    background-color:#FFF;
+}
+
+.page.current { 
+    display: block; 
+    z-index: 1; 
+    -webkit-transition: All 0.2s ease-out; 
+    -moz-transition: All 0.2s ease-out; 
+    -o-transition: All 0.2s ease-out; 
+    -ms-transition: All 0.2s ease-out; 
+    transition: All 0.2s ease-out; 
+}
+
+.page.new { 
+    display: block; 
+    z-index: 10; 
+    -webkit-transition: All 0.2s ease-out; 
+    -moz-transition: All 0.2s ease-out; 
+    -o-transition: All 0.2s ease-out; 
+    -ms-transition: All 0.2s ease-out; 
+    transition: All 0.2s ease-out; 
+}
+
+@media (min-width:501px) {
+    #visor { 
+        width:500px; position: absolute; top: 0; left: 50%; bottom: 0; margin-left: -250px; overflow: hidden;
+    }
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
